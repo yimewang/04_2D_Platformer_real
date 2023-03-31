@@ -3,12 +3,11 @@ extends Node
 const SAVE_PATH = "user://savegame.sav"
 const SECRET = "C220 Is the Best!"
 var save_file = ConfigFile.new()
-var Global = get_node_or_null("res://Global.gd")
 
-onready var HUD = get_node_or_null("/root/Game/UI/HUD")
+onready var HUD = null
 onready var Coins = get_node_or_null("/root/Game/Coins")
 onready var Game = load("res://Game.tscn")
-onready var Coin = load("res://Coin/Coin.tscn")
+onready var Coin = null
 var save_data = {
 	"general": {
 		"score":0
@@ -25,11 +24,15 @@ func _ready():
 
 func update_score(s):
 	save_data["general"]["score"] += s
-	HUD.find_node("Score").text = "Score: " + str(save_data["general"]["score"])
+	HUD = get_node_or_null("/root/Game/UI/HUD")
+	if HUD != null:
+		HUD.find_node("Score").text = "Score: " + str(save_data["general"]["score"])
 
 func update_health(h):
 	save_data["general"]["health"] += h
-	HUD.find_node("Health").text = "Health: " + str(save_data["general"]["health"])
+	HUD = get_node_or_null("/root/Game/UI/HUD")
+	if HUD != null:
+		HUD.find_node("Health").text = "Health: " + str(save_data["general"]["health"])
 
 
 func restart_level():

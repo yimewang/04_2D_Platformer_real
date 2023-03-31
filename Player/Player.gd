@@ -71,3 +71,7 @@ func die():
 func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation == "Attacking":
 		SM.set_state("Idle")
+
+
+func _on_Area2D_body_entered(_body):
+	 pass # Replace with function body.
