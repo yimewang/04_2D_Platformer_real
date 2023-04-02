@@ -174,13 +174,13 @@ extents = Vector2( 51.5, 40 )
 
 [node name="Bat" type="KinematicBody2D"]
 position = Vector2( 1, 4 )
+scale = Vector2( 0.25, 0.25 )
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 5, 5 )
 frames = SubResource( 62 )
 animation = "move"
-frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

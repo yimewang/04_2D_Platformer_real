@@ -65,13 +65,11 @@ func attack():
 			target.damage()
 
 func die():
-	queue_free()
-
+	Global.update_health(-10)
+	if Global.save_data["general"]["health"] == 0:
+		queue_free()
 
 func _on_AnimatedSprite_animation_finished():
 	if $AnimatedSprite.animation == "Attacking":
 		SM.set_state("Idle")
 
-
-func _on_Area2D_body_entered(_body):
-	 pass # Replace with function body.
