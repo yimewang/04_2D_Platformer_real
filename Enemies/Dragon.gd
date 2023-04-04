@@ -4,6 +4,8 @@ onready var SM = $StateMachine
 
 
 var velocity = Vector2.ZERO
+var direction = 1
+var walking = 0.0
 
 func _ready():
 	SM.set_state("Idle")
@@ -14,6 +16,7 @@ func set_animation(anim):
 	else: $AnimatedSprite.play()
 
 func damage():
+	print("damage")
 	if SM.state_name != "Die":
 		SM.set_state("Hurt")
 
@@ -38,6 +41,6 @@ func _on_AnimatedSprite_animation_finished():
 
 
 
-func _on_Detect_body_entered(body):
+func _on_Detect_body_entered(_body):
 	if SM.state_name != "Attack":
 		SM.set_state("Attack")

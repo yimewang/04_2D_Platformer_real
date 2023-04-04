@@ -1,5 +1,4 @@
 extends Control
-var Global = get_node_or_null("res://Global.gd")
 
 func _unhandled_input(event):
 	if event.is_action_pressed("menu"):
