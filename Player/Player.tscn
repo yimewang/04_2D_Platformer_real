@@ -221,7 +221,7 @@ one_shot = true
 [node name="Attack" type="RayCast2D" parent="."]
 position = Vector2( 0, -10 )
 enabled = true
-cast_to = Vector2( 0, 100 )
+cast_to = Vector2( 30, 0 )
 collision_mask = 3
 
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

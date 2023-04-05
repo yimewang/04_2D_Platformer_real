@@ -14,7 +14,7 @@ func physics_process(_delta):
 		SM.set_state("Attack")
 	else:
 		enemy.velocity.x = enemy.direction * enemy.walking
-		if enemy.position.x > enemy.path[1].x:
-			enemy.velocity.x = -1*abs(enemy.walking)
-		if enemy.position.x < enemy.path[0].x:
-			enemy.velocity.x = abs(enemy.velocity.x)
+		#if enemy.position.x > enemy.path[1].x:
+		#	enemy.velocity.x = -1*abs(enemy.walking)
+		#if enemy.position.x < enemy.path[0].x:
+		#	enemy.velocity.x = abs(enemy.velocity.x)

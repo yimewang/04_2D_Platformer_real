@@ -7,7 +7,7 @@ var save_file = ConfigFile.new()
 onready var HUD = null
 onready var Coins = get_node_or_null("/root/Game/Coins")
 onready var Game = load("res://Game.tscn")
-onready var Coin = null
+onready var Coin = load("res://Coin/Coin.tscn")
 var save_data = {
 	"general": {
 		"score":0
