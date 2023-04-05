@@ -18,7 +18,7 @@ func set_animation(anim):
 func damage():
 	print("damage")
 	if SM.state_name != "Die":
-		SM.set_state("Hurt")
+		SM.set_state("Die")
 
 
 func should_attack():
@@ -33,8 +33,6 @@ func attack_target():
 
 func _on_AnimatedSprite_animation_finished():
 	if SM.state_name == "Attack":
-		SM.set_state("Idle")
-	if SM.state_name == "Hurt":
 		SM.set_state("Idle")
 	if SM.state_name == "Die":
 		queue_free()

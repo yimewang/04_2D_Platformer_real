@@ -63,6 +63,7 @@ func attack():
 		var target = $Attack.get_collider()
 		if target.has_method("damage"):
 			target.damage()
+			
 
 func die():
 	Global.update_health(-10)

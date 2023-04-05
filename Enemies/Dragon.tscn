@@ -1,4 +1,4 @@
-[gd_scene load_steps=555 format=2]
+[gd_scene load_steps=554 format=2]
 
 [ext_resource path="res://Enemies/Dragon.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Death/053.png" type="Texture" id=2]
@@ -548,7 +548,6 @@
 [ext_resource path="res://Assets/Idle/136.png" type="Texture" id=546]
 [ext_resource path="res://Assets/Idle/138.png" type="Texture" id=547]
 [ext_resource path="res://Assets/Idle/134.png" type="Texture" id=548]
-[ext_resource path="res://Enemies/Hurt.gd" type="Script" id=549]
 [ext_resource path="res://Enemies/Idle.gd" type="Script" id=550]
 [ext_resource path="res://Enemies/Die.gd" type="Script" id=551]
 [ext_resource path="res://Enemies/Attack.gd" type="Script" id=552]
@@ -557,7 +556,7 @@
 [sub_resource type="SpriteFrames" id=23]
 animations = [ {
 "frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 16 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 17 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 52 ), ExtResource( 64 ), ExtResource( 33 ), ExtResource( 27 ), ExtResource( 45 ), ExtResource( 61 ), ExtResource( 26 ), ExtResource( 65 ), ExtResource( 23 ), ExtResource( 28 ), ExtResource( 62 ), ExtResource( 67 ), ExtResource( 69 ), ExtResource( 78 ), ExtResource( 38 ), ExtResource( 57 ), ExtResource( 42 ), ExtResource( 48 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 72 ), ExtResource( 36 ), ExtResource( 58 ), ExtResource( 31 ), ExtResource( 37 ), ExtResource( 59 ), ExtResource( 50 ), ExtResource( 63 ), ExtResource( 74 ), ExtResource( 53 ), ExtResource( 22 ), ExtResource( 54 ), ExtResource( 60 ), ExtResource( 66 ), ExtResource( 56 ), ExtResource( 41 ), ExtResource( 81 ), ExtResource( 76 ), ExtResource( 75 ), ExtResource( 39 ), ExtResource( 24 ), ExtResource( 68 ), ExtResource( 73 ), ExtResource( 25 ), ExtResource( 49 ), ExtResource( 77 ), ExtResource( 47 ), ExtResource( 79 ), ExtResource( 29 ), ExtResource( 43 ), ExtResource( 70 ), ExtResource( 51 ), ExtResource( 40 ), ExtResource( 71 ), ExtResource( 30 ), ExtResource( 80 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 44 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 46 ), ExtResource( 32 ), ExtResource( 55 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 85 ), ExtResource( 119 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 105 ), ExtResource( 92 ), ExtResource( 90 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 107 ), ExtResource( 129 ), ExtResource( 88 ), ExtResource( 103 ), ExtResource( 114 ), ExtResource( 89 ), ExtResource( 94 ), ExtResource( 120 ), ExtResource( 125 ), ExtResource( 115 ), ExtResource( 108 ), ExtResource( 95 ), ExtResource( 124 ), ExtResource( 121 ), ExtResource( 91 ), ExtResource( 110 ), ExtResource( 99 ), ExtResource( 113 ), ExtResource( 111 ), ExtResource( 116 ), ExtResource( 109 ), ExtResource( 104 ), ExtResource( 130 ), ExtResource( 126 ), ExtResource( 102 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 122 ), ExtResource( 112 ), ExtResource( 123 ), ExtResource( 98 ), ExtResource( 127 ), ExtResource( 93 ), ExtResource( 106 ), ExtResource( 128 ) ],
-"loop": false,
+"loop": true,
 "name": "Attack",
 "speed": 35.0
 }, {
@@ -585,7 +584,7 @@ position = Vector2( 300, -477 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 23 )
 animation = "Idle"
-frame = 132
+frame = 76
 playing = true
 flip_h = true
 
@@ -604,9 +603,6 @@ script = ExtResource( 553 )
 
 [node name="Idle" type="Node" parent="StateMachine"]
 script = ExtResource( 550 )
-
-[node name="Hurt" type="Node" parent="StateMachine"]
-script = ExtResource( 549 )
 
 [node name="Attack" type="Node" parent="StateMachine"]
 script = ExtResource( 552 )
